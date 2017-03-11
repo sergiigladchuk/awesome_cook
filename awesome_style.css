@@ -5,6 +5,18 @@
 .main-block{
   background-color: yellow;
 }
+.header-top {
+  height: 180px;
+  background-color: green;
+  margin bottom: 50px;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  width: 158px;
+  height:160px;
+}
 
 body {
     background-color: lightblue;
