@@ -80,6 +80,24 @@ input {
   }
 
 
+#top{
+  width: 450px;
+  height: 281px;
+  background: url("img/top.png") no-repeat;
+}
+.ref-mid{
+  /*display: none;*/
+  width: 450px;
+  height: 60px;
+  background: url("img/middle.png") no-repeat;
+}
+
+#bottom{
+  width: 450px;
+  height: 95px;
+  background: url("img/bottom.png") no-repeat;
+}
+
 #result-block, #receiver {
   background-color: #F0E68C;
 }
