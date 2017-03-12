@@ -1,18 +1,20 @@
 body {
   background: url("img/background-image.jpg") no-repeat;
-  background-size: 100%;
+  background-attachment:fixed;
+  background-size:cover;
   background-color: #E0FFFF;
 }
 .header-top {
   height: 130px;
   background-color: #90EE90;
   margin bottom: 50px;
+  position: relative;
 }
 .logo {
   float: right;
-  position: absolute;
+  position: relative;
   right:100px;
-  top: 74px;
+  top: 20px;
 }
 .logo img {
   width: 152px;
@@ -29,16 +31,21 @@ h1{
   top: 20px;
 }
 .main-block{
-  height: 200px;
+  height: 210px;
   width: 500px;
   background-color: 	#F0E68C;
+  position: relative;
+  left: 240px;
 }
-h2{
+p.instruction{
   font-size: 28px;
   font-family: Arial sans-serif;
   font-style: italic;
   color: 	black;
-  margin-left: 50px;
+  text-align: center;
+  padding-top:15px;
+  margin-left:10px;
+  margin-right: 10px;
 }
 form{
   display: block;
@@ -48,7 +55,7 @@ table {
   border-collapse: separate;
   border-spacing: 2px;
   border-color:grey;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 tbody {
     display: table-row-group;
@@ -64,6 +71,13 @@ td, th{
   display: table-cell;
   vertical-align: inherit;
 }
+.title{
+  font-size: 18px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  color: 	black;
+
+}
 label {
     cursor: default;
 }
@@ -76,10 +90,34 @@ input {
   .send-btn{
     height: 30px;
     width: 30px;
-    background-color:#E0FFFF;
+    background-color: inherit;
+    position:relative;
+    left: 265px;
+    top: -31px;
   }
 
-
+.refrigerator{
+  position:absolute;
+  left: 800px;
+  top: 215px;
+  z-index: 1;
+}
+.ingredient {
+  color: #E0FFFF;
+  padding-bottom: 35px;
+  position: relative;
+  left: 175px;
+  top: 170px;
+  z-index: 2;
+}
+.delete-btn{
+height: 20px;
+width: 20px;
+background-color: inherit;
+position: relative;
+left: 10px;
+top: 8px;
+}
 #top{
   width: 450px;
   height: 281px;
@@ -91,17 +129,55 @@ input {
   height: 60px;
   background: url("img/middle.png") no-repeat;
 }
+.ref-mid .ingredient{
+  position: relative;
+  left:175px;
+  top: 10px;
+  padding-bottom: 45px;
+}
+.ref-mid .delete-btn {
+  position: relative;
+  left: 10px;
+  top: 8px;
+}
 
 #bottom{
   width: 450px;
   height: 95px;
   background: url("img/bottom.png") no-repeat;
 }
-
+#bottom .ingredient{
+  position: relative;
+  left:175px;
+  top: 10px;
+  padding-bottom: 45px;
+}
+#bottom .delete-btn{
+  position: relative;
+  left: 3px;
+  top: 8px;
+}
 #result-block, #receiver {
+  height: 565px;
+  width: 780px;
+  position: relative;
+  left: 100px;
+  top: 45px;
   background-color: #F0E68C;
 }
 .main-footer {
-height: 130px;
-background-color: #90EE90
+height: 80px;
+background-color: #90EE90;
+margin-bottom: 50px;
+position: relative;
+top: 100px;
+}
+.copyright{
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: 	black;
+  padding-top: 30px;
 }
