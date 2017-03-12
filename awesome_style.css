@@ -30,17 +30,25 @@ h1{
 }
 .main-block{
   height: 200px;
+  width: 500px;
   background-color: 	#F0E68C;
+}
+h2{
+  font-size: 28px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  color: 	black;
+  margin-left: 50px;
 }
 form{
   display: block;
-  margin-top: 10px;
 }
 table {
   display: table;
   border-collapse: separate;
   border-spacing: 2px;
-  border-color:grey
+  border-color:grey;
+  margin-left: 50px;
 }
 tbody {
     display: table-row-group;
@@ -59,6 +67,17 @@ td, th{
 label {
     cursor: default;
 }
+input {
+    background-color: white;
+    cursor: auto;
+    padding: 2px;
+    border-width: 2px;
+  }
+  .send-btn{
+    height: 30px;
+    width: 30px;
+    background-color:#E0FFFF;
+  }
 
 
 #result-block, #receiver {

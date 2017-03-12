@@ -18,7 +18,8 @@
         </div>
     </header>
     <section class="main-block">
-      <form class="input-form" action method="post"
+      <h2> Заголовок к таблице </h2>
+      <form class="input-form" action method="post">
       <table>
         <tbody>
           <tr>
@@ -26,6 +27,7 @@
             <label for="ingredient">
             Ingredient:</label>
           </td class="field">
+          <td>
             <input type="text" id="ingredient" name="ingredient" placeholder="text">
           </td>
         </tr>
@@ -34,6 +36,7 @@
             <label for="quantity">
             Quantity:</label>
           </td class="field">
+          <td>
             <input type="select" id="quantity" name="quantity" placeholder="text">
           </td>
         </tr>
@@ -42,12 +45,14 @@
             <label for="units">
             Units:</label>
           </td class="field">
+          <td>
             <input type="text" id="units" name="units" placeholder="text">
           </td>
         </tr>
         <tr>
-        </td class="field">
-          <input type="submit" class="send-btn" value="add">
+        <td>
+          <input type="image"  src="img/plus.png" class="send-btn" alt="add">
+        </td>
       </tr>
       </tbody>
     </table>
