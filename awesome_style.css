@@ -1,23 +1,70 @@
-#result-block, #receiver {
-  background-color: #cd853f;
-}
-
-.main-block{
-  background-color: yellow;
+body {
+  background: url("img/background-image.jpg") no-repeat;
+  background-size: 100%;
+  background-color: #E0FFFF;
 }
 .header-top {
-  height: 180px;
-  background-color: green;
+  height: 130px;
+  background-color: #90EE90;
   margin bottom: 50px;
 }
 .logo {
-  float: left;
+  float: right;
+  position: absolute;
+  right:100px;
+  top: 74px;
 }
 .logo img {
-  width: 158px;
-  height:160px;
+  width: 152px;
+  height:97px;
+}
+h1{
+  font-size: 82px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  color: 	#FF4500;
+  position: relative;
+  left: 200px;
+  right: 200px;
+  top: 20px;
+}
+.main-block{
+  height: 200px;
+  background-color: 	#F0E68C;
+}
+form{
+  display: block;
+  margin-top: 10px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color:grey
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td, th{
+  display: table-cell;
+  vertical-align: inherit;
+}
+label {
+    cursor: default;
 }
 
-body {
-    background-color: lightblue;
+
+#result-block, #receiver {
+  background-color: #F0E68C;
+}
+.main-footer {
+height: 130px;
+background-color: #90EE90
 }

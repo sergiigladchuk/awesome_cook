@@ -8,25 +8,58 @@
   </head>
   <body>
     <header>
-      <div class="header-top">
-        <div class="logo">
-          <img src="img/imgpsh_fullsize.png">
+        <div class="header-top">
+          <div class="logo">
+            <img src="img/imgpsh_fullsize.png">
+          </div>
+          <div class="title">
+            <h1>Awesome Cook</h1>
+          </div>
         </div>
-        <div class="title">
-          <h1>Awesome Cook</h1>
-        </div>
-
-      </div>
     </header>
-    <div class="main-block">
-      <input type="text" name="ingredient">
-      <input type="select" name="quantity">
-      <input type="text" name="units">
+    <section class="main-block">
+      <form class="input-form" action method="post"
+      <table>
+        <tbody>
+          <tr>
+          <td class="title"
+            <label for="ingredient">
+            Ingredient:</label>
+          </td class="field">
+            <input type="text" id="ingredient" name="ingredient" placeholder="text">
+          </td>
+        </tr>
+        <tr>
+          <td class="title"
+            <label for="quantity">
+            Quantity:</label>
+          </td class="field">
+            <input type="select" id="quantity" name="quantity" placeholder="text">
+          </td>
+        </tr>
+        <tr>
+          <td class="title"
+            <label for="units">
+            Units:</label>
+          </td class="field">
+            <input type="text" id="units" name="units" placeholder="text">
+          </td>
+        </tr>
+        <tr>
+        </td class="field">
+          <input type="submit" class="send-btn" value="add">
+      </tr>
+      </tbody>
+    </table>
+    </form>
+    </section>
 
-    </div>
-    <div class="refrigerator">
+    <section class="recipes">
+      <iframe name="receiver" id="receiver"></iframe>
+    </section>
 
-    </div>
+    <aside class="refrigerator">
+    </aside>
 
 
 
@@ -37,10 +70,8 @@
         <input id="input" type="text" name="description">
         <input id="button" type="submit">
     </form>-->
-    <div id="result-block">
-      <iframe name="receiver" id="receiver"></iframe>
-    </div>
-    <footer>
+
+    <footer class="main-footer">
 
     </footer>
   </body>
