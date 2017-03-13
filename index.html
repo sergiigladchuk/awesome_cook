@@ -4,7 +4,7 @@
     <title>Awesome Cook</title>
     <link rel="stylesheet" type="text/css" href="awesome_style.css">
     <script src="jquery-3.1.1.min.js"></script>
-    <script src="interaction.js"></script>
+    <script type="text/javascript" src="interaction.js"></script>
   </head>
   <body>
     <header>
@@ -28,12 +28,12 @@
             Ingredient:</label>
           </td class="field">
           <td>
-            <input type="text" id="ingredient" name="ingredient" placeholder="e.g. eggs">
+            <input type="text" id="ingredient-text" name="ingredient" placeholder="e.g. eggs">
           </td>
         </tr>
         <tr>
         <td>
-          <input type="image"  src="img/Plus.png" class="send-btn" alt="add">
+          <input type="image"  id="igredient-btn" src="img/Plus.png" class="send-btn" alt="add">
         </td>
       </tr>
       </tbody>
@@ -48,61 +48,65 @@
     <aside class="refrigerator">
       <div id="top">
         <div class="ingredient" id="ing-1">
-          Ingredient 1
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-1">
+          <div class="ing-out-text" id="ing-text-1">Ingredient 1</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-1">
         </div>
         <div class="ingredient" id="ing-2">
-          Ingredient 2
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-2">
+          <div class="ing-out-text" id="ing-text-2">Ingredient 2</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-2">
         </div>
       </div>
       <div id="insert-1" class="ref-mid">
         <div class="ingredient" id="ing-3">
-          Ingredient 3
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-3">
+          <div class="ing-out-text" id="ing-text-3">Ingredient 3</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-3">
         </div>
       </div>
       <div id="insert-2" class="ref-mid">
         <div class="ingredient" id="ing-4">
-          Ingredient 4
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-4">
+          <div class="ing-out-text" id="ing-text-4">Ingredient 4</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-4">
         </div>
       </div>
       <div id="insert-3" class="ref-mid">
         <div class="ingredient" id="ing-5">
-          Ingredient 5
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-5">
+          <div class="ing-out-text" id="ing-text-5">Ingredient 5</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-5">
         </div>
       </div>
       <div id="insert-4" class="ref-mid">
         <div class="ingredient" id="ing-6">
-          Ingredient 6
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-6">
+          <div class="ing-out-text" id="ing-text-6">Ingredient 6</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-6">
         </div>
       </div>
       <div id="insert-5" class="ref-mid">
         <div class="ingredient" id="ing-7">
-          Ingredient 7
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-7">
+          <div class="ing-out-text" id="ing-text-7">Ingredient 7</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-7">
         </div>
       </div>
       <div id="insert-6" class="ref-mid">
         <div class="ingredient" id="ing-8">
-          Ingredient 8
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-8">
+          <div class="ing-out-text" id="ing-text-8">Ingredient 8</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-8">
         </div>
       </div>
       <div id="insert-7" class="ref-mid">
         <div class="ingredient" id="ing-9">
-          Ingredient 9
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-9">
+          <div class="ing-out-text" id="ing-text-9">Ingredient 9</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-9">
         </div>
       </div>
       <div id="bottom">
         <div class="ingredient" id="ing-last">
-          Ingredient 10
-            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-last">
+          <div class="ing-out-text" id="ing-text-last">Ingredient 10</div>
+          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-last">
         </div>
+      </div>
+      <div class="main-buttons">
+        <button type="button" id='get-recipes-btn'>Get recipes</button>
+        <button type="button" id='get-clear-all-btn'>Clear all ingredients</button>
       </div>
     </aside>
 
