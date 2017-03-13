@@ -4,10 +4,19 @@ import json
 import io
 import re
 
-#for testing
-ingredients = ['egg','milk','oil']
-ingredRegex = re.compile('.*(' + '|'.join(ingredients) + ').*', re.I)
+import cgi, cgitb
 
+
+# Get id from field
+
+query = cgi.FieldStorage()
+ingJson = query.getvalue('json-ingradients')
+ingredients = json.loads(ingJson)
+#for testing
+#ingredients = ['egg','milk','oil']
+
+
+ingredRegex = re.compile('.*(' + '|'.join(ingredients) + ').*', re.I)
 
 dbFile = open('db-recipes.json','r')
 db = json.loads(dbFile.read())

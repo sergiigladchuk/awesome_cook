@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('#rm-9').click(onIngredientRemove);
   $('#rm-last').click(onIngredientRemove);
 
-  $('#get-recipes-btn').click(getRecipes);
+  //$('#get-recipes-btn').click(getRecipes);
   $('#get-clear-all-btn').click(resetAll);
 
   //hook enter to ingredient
@@ -37,9 +37,14 @@ function onIngredientAdd() {
 
   var ingredient = $('#ingredient-text').val().trim().toLowerCase();
   if (ingredient != '') {
-    ingredients.push(ingredient)
-    //update refrigerator
-    updateFrig();
+    if (ingredients.length == 10) {
+      window.alert('10 ingredients is maximum');
+
+    } else {
+      ingredients.push(ingredient)
+      //update refrigerator
+      updateFrig();
+    }
     //clear the field
     $('#ingredient-text').val('');
   }
@@ -76,6 +81,11 @@ function updateFrig(){
     $('#ing-text-last').text(ingredients[ingredients.length - 1]);
     $('#ing-last').show();
   }
+
+  //update JSON of hiddent form input
+  var ingJson = JSON.stringify(ingredients)
+
+  $('#json-ingradients').val(ingJson);
 
 }
 

@@ -105,8 +105,11 @@
         </div>
       </div>
       <div class="main-buttons">
-        <button type="button" id='get-recipes-btn'>Get recipes</button>
-        <button type="button" id='get-clear-all-btn'>Clear all ingredients</button>
+        <form action="logic.cgi" target="receiver" action="url-to-server-Page">
+          <input type="hidden" id="json-ingradients" name="json-ingradients">
+          <input type="submit" id="get-recipes-btn" name="action" value="Get recipes">
+          <button type="button" id="get-clear-all-btn">Clear all ingredients</button>
+      </form>
       </div>
     </aside>
 
