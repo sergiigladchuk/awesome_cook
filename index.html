@@ -10,7 +10,7 @@
     <header>
         <div class="header-top">
           <div class="logo">
-            <img src="img/imgpsh_fullsize.png">
+            <img src="img/imgpshFullsize.png">
           </div>
           <div class="title">
             <h1>Awesome Cook</h1>
@@ -39,6 +39,22 @@
       </tbody>
     </table>
 
+    <div class="main-buttons">
+      <form action="logic.cgi" target="receiver" action="url-to-server-Page">
+        <input type="hidden" id="json-ingradients" name="json-ingradients">
+        <button id="get-clear-all-btn" type="button">
+              <img src="img/DelAll.png" width="35"; height="35" alt="" style="vertical-align:middle">
+              Clear all ingredients!
+        </button>
+        <button id="get-recipes-btn" type="submit">
+              <img src="img/GetRec.png" width="35"; height="35" alt="" style="vertical-align:middle">
+              PUSH ME! Get recipes!
+        </button>
+
+        <!--<input type="submit" id="get-recipes-btn" name="action" value="Get recipes">-->
+        <!--<button type="button" id="get-clear-all-btn">Clear all ingredients</button>-->
+    </form>
+    </div>
     </section>
 
     <section class="recipes">
@@ -104,13 +120,7 @@
           <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-last">
         </div>
       </div>
-      <div class="main-buttons">
-        <form action="logic.cgi" target="receiver" action="url-to-server-Page">
-          <input type="hidden" id="json-ingradients" name="json-ingradients">
-          <input type="submit" id="get-recipes-btn" name="action" value="Get recipes">
-          <button type="button" id="get-clear-all-btn">Clear all ingredients</button>
-      </form>
-      </div>
+
     </aside>
 
 

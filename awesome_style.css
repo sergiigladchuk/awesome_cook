@@ -1,20 +1,21 @@
 body {
+  min-width: 1000px;
   background: url("img/background-image.jpg") no-repeat;
   background-attachment:fixed;
   background-size:cover;
   background-color: #E0FFFF;
 }
 .header-top {
+  width:100%;
   height: 130px;
   background-color: #90EE90;
   margin bottom: 50px;
-  position: relative;
 }
 .logo {
-  float: right;
+  float:  right;
   position: relative;
-  right:100px;
-  top: 20px;
+  top:15px;
+  right: 300px;
 }
 .logo img {
   width: 152px;
@@ -24,18 +25,19 @@ h1{
   font-size: 82px;
   font-family: Arial sans-serif;
   font-style: italic;
+  text-align: center;
   color: 	#FF4500;
   position: relative;
-  left: 200px;
-  right: 200px;
   top: 20px;
 }
 .main-block{
-  height: 210px;
-  width: 500px;
+  height: 120px;
+  width: 780px;
   background-color: 	#F0E68C;
+  border-radius: 5px;
   position: relative;
-  left: 240px;
+  top:80px;
+  left: 100px;
 }
 p.instruction{
   font-size: 28px;
@@ -47,15 +49,12 @@ p.instruction{
   margin-left:10px;
   margin-right: 10px;
 }
-form{
-  display: block;
-}
 table {
   display: table;
   border-collapse: separate;
   border-spacing: 2px;
   border-color:grey;
-  margin-left: 100px;
+  margin-left: 240px;
 }
 tbody {
     display: table-row-group;
@@ -85,6 +84,7 @@ input {
     background-color: white;
     cursor: auto;
     padding: 2px;
+    margin-left: 10px;
     border-width: 2px;
   }
   .send-btn{
@@ -95,28 +95,55 @@ input {
     left: 265px;
     top: -31px;
   }
-
+  .main-buttons{
+    position: relative;
+    left: 330px;
+    top: 20px;
+  }
+  #get-recipes-btn{
+    width: 220px;
+    text-align: left;
+    border-radius:  5px;
+    border: 3px solid #00FF00;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial sans-serif;
+    font-style: italic;
+    color: 	black;
+    font-weight: bold;
+  }
+  #get-clear-all-btn{
+    width: 220px;
+    text-align: left;
+    border-radius:  5px;
+    border: 3px solid #FF4500;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial sans-serif;
+    font-style: italic;
+    color: 	black;
+    font-weight: bold;
+  }
 .refrigerator{
-  position:absolute;
-  left: 800px;
-  top: 215px;
-  z-index: 1;
+  float: right;
+  position: relative;
+  bottom: 680px;
+  right: 150px;
 }
 .ingredient {
   color: #E0FFFF;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
   position: relative;
   left: 175px;
-  top: 170px;
-  z-index: 2;
+  top: 180px;
 }
 .delete-btn{
 height: 20px;
 width: 20px;
 background-color: inherit;
 position: relative;
-left: 10px;
-top: 8px;
+left: 90px;
+top: -21px;
 }
 #top{
   width: 450px;
@@ -132,13 +159,13 @@ top: 8px;
 .ref-mid .ingredient{
   position: relative;
   left:175px;
-  top: 10px;
-  padding-bottom: 45px;
+  top: 21px;
+  padding-bottom: 15px;
 }
 .ref-mid .delete-btn {
   position: relative;
-  left: 10px;
-  top: 8px;
+  left: 90px;
+  top: -21px;
 }
 
 #bottom{
@@ -149,35 +176,46 @@ top: 8px;
 #bottom .ingredient{
   position: relative;
   left:175px;
-  top: 10px;
-  padding-bottom: 45px;
+  top: 21px;
+  padding-bottom: 15px;
 }
 #bottom .delete-btn{
   position: relative;
-  left: 3px;
-  top: 8px;
+  left: 90px;
+  top: -21px;
 }
+
 #result-block, #receiver {
   height: 565px;
   width: 780px;
+  background-color: #F0E68C;
+  border-radius: 5px;
   position: relative;
   left: 100px;
-  top: 45px;
+  top: 200px;
   background-color: #F0E68C;
 }
 .main-footer {
+width: 100%;
 height: 80px;
 background-color: #90EE90;
 margin-bottom: 50px;
 position: relative;
-top: 100px;
+top: 220px;
+}
+.footer-top::after,
+.footer-bottom::after {
+  display: table;
+  clear: both;
+  content: "";
 }
 .copyright{
-  text-align: center;
   font-size: 18px;
   font-family: Arial sans-serif;
   font-weight: bold;
   font-style: italic;
+  text-align: center;
   color: 	black;
   padding-top: 30px;
+  padding-left: 250px;
 }
