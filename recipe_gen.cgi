@@ -38,11 +38,18 @@ else:
 
 print('<ul>')
 for ingredient in recipe['ingredients']:
-    print('<li>{}</li>'.format(ingredient.rstrip()))
+    if ingredient.rstrip() == '<hr>':
+      print('<hr>')
+    else:
+      print('<li>{}</li>'.format(ingredient.rstrip()))
 print('</ul>')
 
 #instructions
 print('<h3>Instructions</h3>')
-print('<p>{}</p>'.format(recipe['instructions'].replace('\r\n\r\n','<br>')))
+#correction for unicode to html
+instructions = recipe['instructions']#.replace('\r\n\r\n','').replace('\r\n','').replace('b"','')
+instructions = str(cgi.escape(instructions).encode('ascii', 'xmlcharrefreplace'),'utf-8').replace('\r\n\r\n','<br>')
+#instructions = unicode(recipe['instructions'].replace('\r\n\r\n','<br>'),"utf-8")#.replace('\u02da','')
+print('<p>{}</p>'.format(instructions))
 print("</body>")
 print("</html>")
