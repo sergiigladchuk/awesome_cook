@@ -1,0 +1,22 @@
+body{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h1{
+  font-size: 32px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  text-align: left;
+  color: 		#000080;
+}
+h3{
+  font-size: 20px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  text-align: left;
+  color: 		#000080;
+}
+ul, p  {
+font-size: 18px;
+font-family: Arial sans-serif;
+}

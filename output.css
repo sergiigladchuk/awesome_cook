@@ -1,0 +1,28 @@
+body{
+  background: url("img/Background1.png") no-repeat;
+  background-size: 700px 690px;
+  background-position: center;
+}
+h1{
+  font-size: 42px;
+  font-family: Arial sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: 	#FF4500;
+  margin-top: 60px;
+}
+.recipe-line{
+  vertical-align: middle;
+  margin-top:12px;
+  padding-left: 220px;
+  font-size: 20px;
+  font-family: Arial sans-serif;
+}
+.recipe-line a:link{
+  text-decoration: none;
+  color:	#191970;
+}
+.recipe-line a:hover{
+  text-decoration: underline;
+  color: 	#FF4500;
+}
