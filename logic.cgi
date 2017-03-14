@@ -12,8 +12,9 @@ import cgi, cgitb
 query = cgi.FieldStorage()
 ingJson = query.getvalue('json-ingradients')
 ingredients = json.loads(ingJson)
+
 #for testing
-#ingredients = ['egg','milk','oil']
+#ingredients = ['sugar','butter','soda','flour','seeds','vanilla']
 
 
 ingredRegex = re.compile('.*(' + '|'.join(ingredients) + ').*', re.I)
@@ -32,14 +33,14 @@ for recipeId in db:
 
         #check with input
         if re.match(ingredRegex, checkIngredientStr) != None:
-            recipeScore+=1
+            recipeScore += 1
 
     if recipeScore > 0:
         recipe['score'] = recipeScore
         selectedRecipes.append(recipe)
 
 #sort the recipes based on score
-sortedRecipes = sorted(selectedRecipes, key=lambda k: k['score'])
+sortedRecipes = sorted(selectedRecipes, key=lambda k: k['score'], reverse=True)
 
 #build html content for top 10 hits
 print("Content-type:text/html\r\n\r\n")
