@@ -85,7 +85,7 @@ function updateFrig(){
   //update JSON of hiddent form input
   var ingJson = JSON.stringify(ingredients)
 
-  $('#json-ingradients').val(ingJson);
+  $('#json-ingredients').val(ingJson);
 
 }
 

@@ -1,7 +1,10 @@
 body{
+  width: 700px;
+  height: 690px;
   background: url("img/Background1.png") no-repeat;
   background-size: 700px 690px;
   background-position: center;
+
 }
 h1{
   font-size: 42px;
@@ -9,12 +12,18 @@ h1{
   font-style: italic;
   text-align: center;
   color: 	#FF4500;
-  margin-top: 60px;
+  margin-top: auto;
+  padding-top: 55px;
 }
+.main{
+  margin-left:auto;
+  margin-right:auto;
+  width:350px;
+}
+
 .recipe-line{
   vertical-align: middle;
   margin-top:12px;
-  padding-left: 220px;
   font-size: 20px;
   font-family: Arial sans-serif;
 }
@@ -25,4 +34,45 @@ h1{
 .recipe-line a:hover{
   text-decoration: underline;
   color: 	#FF4500;
+}
+
+.recipe-line .pop-up{
+  display: none;
+  width: 400px;
+  background-color: grey;
+  color: #fff;
+  font-size: 70%;
+  border-radius: 6px;
+  padding: 5px 0;
+  max-height: 500px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Popup arrow
+.recipe-line .pop-up::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+*/
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }

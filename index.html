@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Awesome Cook</title>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="awesome_style.css">
     <script src="jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="interaction.js"></script>
@@ -18,109 +19,114 @@
         </div>
     </header>
     <section class="main-block">
-      <p class="instruction">Enter here what you've got in your refrigerator</p>
+      <div class="centering-left">
 
-      <table>
-        <tbody>
-          <tr>
-          <td class="title"
-            <label for="ingredient">
-            Ingredient:</label>
-          </td class="field">
-          <td>
-            <input type="text" id="ingredient-text" name="ingredient" placeholder="e.g. eggs">
-          </td>
-        </tr>
-        <tr>
-        <td>
-          <input type="image"  id="igredient-btn" src="img/Plus.png" class="send-btn" alt="add">
-        </td>
-      </tr>
-      </tbody>
-    </table>
 
-    <div class="main-buttons">
-      <form action="logic.cgi" target="receiver" action="url-to-server-Page">
-        <input type="hidden" id="json-ingradients" name="json-ingradients">
-        <button id="get-clear-all-btn" type="button">
-              <img src="img/DelAll.png" width="35"; height="35" alt="" style="vertical-align:middle">
-              Clear all ingredients!
-        </button>
-        <button id="get-recipes-btn" type="submit">
-              <img src="img/GetRec.png" width="35"; height="35" alt="" style="vertical-align:middle">
-              PUSH ME! Get recipes!
-        </button>
+        <div class="left-blocks" id="ingredient-input">
 
-        <!--<input type="submit" id="get-recipes-btn" name="action" value="Get recipes">-->
-        <!--<button type="button" id="get-clear-all-btn">Clear all ingredients</button>-->
-    </form>
-    </div>
-    </section>
+          <p class="instruction">Enter here what you've got in your refrigerator</p>
 
-    <section class="recipes">
-      <iframe name="receiver" id="receiver" src="empty_list.html">  </iframe>
+          <table>
+            <tbody>
+            <tr>
+              <td class="title">
+                <label for="ingredient">Ingredient:</label>
+              </td>
+              <td>
+                <input type="text" id="ingredient-text" name="ingredient" placeholder="e.g. egg">
+              </td>
+              <td>
+                <input type="image"  id="igredient-btn" src="img/Plus.png" class="send-btn" alt="add">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="main-buttons">
+          <form action="logic.cgi" target="receiver">
+            <input type="hidden" id="json-ingredients" name="json-ingredients">
+            <button id="get-clear-all-btn" type="button">
+                  <img src="img/DelAll.png" width="35" height="35" style="vertical-align:middle">
+                  Clear all ingredients!
+            </button>
+            <button id="get-recipes-btn" type="submit">
+                  <img src="img/GetRec.png" width="35" height="35" style="vertical-align:middle">
+                  PUSH ME! Get recipes!
+            </button>
+
+            <!--<input type="submit" id="get-recipes-btn" name="action" value="Get recipes">-->
+            <!--<button type="button" id="get-clear-all-btn">Clear all ingredients</button>-->
+          </form>
+        </div>
+      </div>
+
+
+        <iframe name="receiver" class="left-blocks" id="receiver" src="empty_list.html">  </iframe>
+      </div>
     </section>
 
     <aside class="refrigerator">
-      <div id="top">
-        <div class="ingredient" id="ing-1">
-          <div class="ing-out-text" id="ing-text-1">Ingredient 1</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-1">
-        </div>
-        <div class="ingredient" id="ing-2">
-          <div class="ing-out-text" id="ing-text-2">Ingredient 2</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-2">
-        </div>
-      </div>
-      <div id="insert-1" class="ref-mid">
-        <div class="ingredient" id="ing-3">
-          <div class="ing-out-text" id="ing-text-3">Ingredient 3</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-3">
-        </div>
-      </div>
-      <div id="insert-2" class="ref-mid">
-        <div class="ingredient" id="ing-4">
-          <div class="ing-out-text" id="ing-text-4">Ingredient 4</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-4">
-        </div>
-      </div>
-      <div id="insert-3" class="ref-mid">
-        <div class="ingredient" id="ing-5">
-          <div class="ing-out-text" id="ing-text-5">Ingredient 5</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-5">
-        </div>
-      </div>
-      <div id="insert-4" class="ref-mid">
-        <div class="ingredient" id="ing-6">
-          <div class="ing-out-text" id="ing-text-6">Ingredient 6</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-6">
-        </div>
-      </div>
-      <div id="insert-5" class="ref-mid">
-        <div class="ingredient" id="ing-7">
-          <div class="ing-out-text" id="ing-text-7">Ingredient 7</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-7">
-        </div>
-      </div>
-      <div id="insert-6" class="ref-mid">
-        <div class="ingredient" id="ing-8">
-          <div class="ing-out-text" id="ing-text-8">Ingredient 8</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-8">
-        </div>
-      </div>
-      <div id="insert-7" class="ref-mid">
-        <div class="ingredient" id="ing-9">
-          <div class="ing-out-text" id="ing-text-9">Ingredient 9</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-9">
-        </div>
-      </div>
-      <div id="bottom">
-        <div class="ingredient" id="ing-last">
-          <div class="ing-out-text" id="ing-text-last">Ingredient 10</div>
-          <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-last">
-        </div>
-      </div>
+      <div class="centering-right">
 
+        <div id="top">
+          <div class="ingredient" id="ing-1">
+            <div class="ing-out-text" id="ing-text-1">Ingredient 1</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-1">
+          </div>
+          <div class="ingredient" id="ing-2">
+            <div class="ing-out-text" id="ing-text-2">Ingredient 2</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-2">
+          </div>
+        </div>
+        <div id="insert-1" class="ref-mid">
+          <div class="ingredient" id="ing-3">
+            <div class="ing-out-text" id="ing-text-3">Ingredient 3</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-3">
+          </div>
+        </div>
+        <div id="insert-2" class="ref-mid">
+          <div class="ingredient" id="ing-4">
+            <div class="ing-out-text" id="ing-text-4">Ingredient 4</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-4">
+          </div>
+        </div>
+        <div id="insert-3" class="ref-mid">
+          <div class="ingredient" id="ing-5">
+            <div class="ing-out-text" id="ing-text-5">Ingredient 5</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-5">
+          </div>
+        </div>
+        <div id="insert-4" class="ref-mid">
+          <div class="ingredient" id="ing-6">
+            <div class="ing-out-text" id="ing-text-6">Ingredient 6</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-6">
+          </div>
+        </div>
+        <div id="insert-5" class="ref-mid">
+          <div class="ingredient" id="ing-7">
+            <div class="ing-out-text" id="ing-text-7">Ingredient 7</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-7">
+          </div>
+        </div>
+        <div id="insert-6" class="ref-mid">
+          <div class="ingredient" id="ing-8">
+            <div class="ing-out-text" id="ing-text-8">Ingredient 8</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-8">
+          </div>
+        </div>
+        <div id="insert-7" class="ref-mid">
+          <div class="ingredient" id="ing-9">
+            <div class="ing-out-text" id="ing-text-9">Ingredient 9</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-9">
+          </div>
+        </div>
+        <div id="bottom">
+          <div class="ingredient" id="ing-last">
+            <div class="ing-out-text" id="ing-text-last">Ingredient 10</div>
+            <input type="image"  src="img/Minus.png" class="delete-btn" alt="remove" id="rm-last">
+          </div>
+        </div>
+      </div>
     </aside>
 
 
@@ -134,7 +140,7 @@
     </form>-->
 
     <footer class="main-footer">
-      <div class="copyright">Copyright © Sergii and Olga Gladchuk, Lund, 2017</div>
+      <div class="copyright">Copyright &#169; Sergii and Olga Gladchuk, Lund, 2017</div>
     </footer>
   </body>
 </html>

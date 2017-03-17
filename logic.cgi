@@ -1,21 +1,13 @@
 #!/usr/bin/python3
-
 import json
 import io
 import re
-
 import cgi, cgitb
 
-
 # Get id from field
-
 query = cgi.FieldStorage()
-ingJson = query.getvalue('json-ingradients')
+ingJson = query.getvalue('json-ingredients')
 ingredients = json.loads(ingJson)
-
-#for testing
-#ingredients = ['sugar','butter','soda','flour','seeds','vanilla']
-
 
 ingredRegex = re.compile('.*(' + '|'.join(ingredients) + ').*', re.I)
 
@@ -48,8 +40,11 @@ print("<html>")
 print("<head>")
 print("<title>Recipes</title>")
 print('<link rel="stylesheet" href="output.css" type="text/css">')
+print('<script src="jquery-3.1.1.min.js"></script>')
+print('<script type="text/javascript" src="ajax.js"></script>')
 print("</head>")
 print("<body>")
+print('<section class="main">')
 print("<h1>Your recipes</h1>")
 
 limCount = 0
@@ -57,10 +52,11 @@ for recipeOut in sortedRecipes:
     #<a href="./cgi-bin/run_script.cgi?param=value">Query</a>
     print('<div class="recipe-line" name="{}">'.format(recipeOut['id']))
     print('<a href="recipe_gen.cgi?id={}">{}</a>'.format( recipeOut['id'], recipeOut['name']) )
+    print('<div class="pop-up"></div>')
     print('</div>')
     limCount += 1
     if limCount == 10:
         break
-
+print('</section>')
 print("</body>")
 print("</html>")
